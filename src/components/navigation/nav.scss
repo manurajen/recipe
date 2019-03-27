@@ -1,0 +1,26 @@
+$blackcolor: #000;
+$whitecolor: #FFF;
+header{
+  background-color: $blackcolor;
+  .nav{
+    display:grid;
+    grid-template-columns: auto auto;
+    .nav-header{
+      img{
+        width: 100px;
+      }
+    }
+    .nav-links{
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      list-style: none;
+      padding-top:20px;
+      a{
+        color:$whitecolor;
+        text-decoration:none;
+      }
+      
+    }
+  }
+  
+}

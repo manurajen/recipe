@@ -1,0 +1,31 @@
+.Header{
+  display: table;
+  width: 100%;
+  .defaultHome,.defaultPage{
+    height:50vh;
+    width:100%;
+    background: url('../../images/wallpaper.jpg');
+    background-size:cover;
+    position: relative;
+    &:before{
+      position:absolute;
+      content:"";
+      width:100%;
+      height:100%;
+      background:rgba(0,0,0,0.5);
+    }
+  }
+  .HeadTxt{
+    z-index: 1;
+    display: table-cell;
+    width: 100%;
+    height:100%;
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+    h1{
+      color:#FFF;
+      text-align: center;
+    }
+  }
+}
