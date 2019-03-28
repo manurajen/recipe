@@ -4,25 +4,23 @@ export default class RecipeListCom extends Component {
   render(){
     const {recipes} = this.props;
     return (
-      <div>
+      <div className="container mt-4">
         <h2>Recipe List</h2>
-        <ul>
+        <div className="row">
          {recipes.map(item => (
-           <li key={item.recipe_id}>
-              <div>
-                <img src={item.image_url} style={{height:'100px'}} />
-                <div>
-                  <h5>{item.title}</h5>
-                  <h6>{item.publisher}</h6>
-                  <div>
-                    <Link to={`/recipe-details/${item.recipe_id}`}>Details</Link>
-                    <a href={item.source_url} target="_blank" rel="noopener noreferrer">Website Link</a>
-                  </div>
+           <div key={item.recipe_id} className="col-12 col-sm-6 col-md-4">
+              <div className="card" style={{width:"18rem"}}>
+                <img className="card-img-top" src={item.image_url} alt="Card image cap" />
+                <div className="card-body">
+                  <h5 className="card-title">{item.title}</h5>
+                  <p className="card-text">{item.publisher}</p>
+                  <Link to={`/recipe-details/${item.recipe_id}`}  className="btn btn-warning">Details</Link>
+                  <a href={item.source_url} target="_blank" rel="noopener noreferrer"  className="btn btn-primary ml-3">Website Link</a>
                 </div>
               </div>
-           </li>
+           </div>
          ))}
-        </ul>
+        </div>
       </div>
     )
   }

@@ -1,13 +1,14 @@
 import React from 'react';
 import RecipesList from '../components/recipe/recipes';
-import {dataList} from '../data/recipesList';
+// import {dataList} from '../data/recipesList';
 export default class Recipes extends React.Component{
   constructor(props){
     super(props);
     this.getRecipes = this.getRecipes.bind(this);
     this.state = {
-      data: dataList,
+      data: {},
       search:'',
+      recive:false,
       url:`https://www.food2fork.com/api/search?key=${process.env.REACT_APP_API_KEY}`,
       base_url:`https://www.food2fork.com/api/search?key=${process.env.REACT_APP_API_KEY}`,
       query:'&q=',
@@ -27,6 +28,7 @@ export default class Recipes extends React.Component{
       } else {
         this.setState({
           data:jsonData.recipes,
+          recive:true,
           error:''
         })
       }
@@ -51,13 +53,16 @@ export default class Recipes extends React.Component{
     this.setState({
       url:`${base_url}${query}${search}`,
       search:'',
+      recive:true,
     },()=>this.getRecipes());
   }
 
   render(){
+    const {recive} = this.state;
     return (
       <>
-        <RecipesList recipes={this.state.data} search={this.state.search} handleChange={this.handleChange} handleSubmit={this.handleSubmit} error={this.state.error} />
+      {recive ? (<RecipesList recipes={this.state.data} search={this.state.search} handleChange={this.handleChange} handleSubmit={this.handleSubmit} error={this.state.error} />) : (<div><h2>Data Loading...</h2></div>)}
+        
       </>
     )
   }

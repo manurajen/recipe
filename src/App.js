@@ -5,6 +5,7 @@ import Recipes from './pages/recipes';
 import RecipeDetails from './pages/recipe-details';
 import Default from './pages/404';
 import NavBar from './components/navigation/nav';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 class App extends Component {
