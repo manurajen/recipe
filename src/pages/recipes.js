@@ -18,9 +18,8 @@ export default class Recipes extends React.Component{
 
   async getRecipes(){
     try{
-      const response = await fetch(this.state.url);
+      const response = await fetch(this.state.url,{ mode: 'no-cors' });
       const jsonData = await response.json();
-      console.log(jsonData.recipes);
       if(jsonData.recipes.length === 0){
         this.setState({
           error: "sorry but your search did not return any recipes, please try agagin or press serach icon for the most popular recipes"

@@ -14,7 +14,7 @@ export default class RecipeDetails extends React.Component{
   async componentDidMount() {
     const url = `https://www.food2fork.com/api/get?key=${process.env.REACT_APP_API_KEY}&rId=${this.state.id}`;
     try{
-      const response = await fetch(url);
+      const response = await fetch(url,{ mode: 'no-cors' });
       const responseData = await response.json();
       this.setState({
         dataDetails: responseData.recipe,
