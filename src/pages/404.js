@@ -5,8 +5,8 @@ export default class Default extends React.Component{
   render(){
     return(
       <>
-        <Header title="404" styleClass="defaultPage" >
-          <Link to="/">Return to Home</Link>
+        <Header title="Something went Wrong!..." styleClass="defaultPage" >
+          <Link to="/" className="btn btn-warning">Return to Home</Link>
         </Header>
       </>
     )

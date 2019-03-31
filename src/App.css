@@ -1,3 +1,41 @@
 .card-img-top{
   height:200px;
 }
+.ingredientsList ul li{
+  border-bottom:1px dotted #CCC;
+  list-style: none;
+  padding:5px;
+}
+.para{
+  width:70%;
+  margin:0 auto;
+  text-align: center;
+}
+.loading{
+  text-align:center;
+}
+.loading p{
+  text-transform: uppercase;
+}
+.loading img{
+  width:75px;
+  margin-top:10px;
+}
+.search{
+  text-align:center;
+}
+.search .searchBox{
+  position: relative;
+  width:100%;
+}
+.search .searchBox input[type="text"]{
+  position:relative;
+  width:100%;
+  height:39px;
+  padding-left:10px;
+}
+.search .searchBox .btn{
+  position: absolute;
+  right:0;
+  border-radius: 0 0;
+}

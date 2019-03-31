@@ -5,6 +5,7 @@ import Recipes from './pages/recipes';
 import RecipeDetails from './pages/recipe-details';
 import Default from './pages/404';
 import NavBar from './components/navigation/nav';
+import Footer from './components/header/footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
@@ -19,6 +20,7 @@ class App extends Component {
           <Route path="/recipe-details/:id" component={RecipeDetails} />
           <Route component={Default} />
         </Switch>
+        <Footer />
       </Router>
     );
   }

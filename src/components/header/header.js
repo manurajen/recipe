@@ -5,7 +5,7 @@ export default function Header ({title,children,styleClass}) {
     return (
       <div className="Header">
         <div className={`wallPaper ${styleClass}`}>
-         <div className="HeadTxt">
+         <div className="container HeadTxt">
           <h1 className="title">
               {title}
             </h1>

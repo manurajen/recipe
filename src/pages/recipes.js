@@ -1,6 +1,6 @@
 import React from 'react';
 import RecipesList from '../components/recipe/recipes';
-// import {dataList} from '../data/recipesList';
+import loadImage from '../images/load.gif';
 export default class Recipes extends React.Component{
   constructor(props){
     super(props);
@@ -60,10 +60,10 @@ export default class Recipes extends React.Component{
   render(){
     const {recive} = this.state;
     return (
-      <>
-      {recive ? (<RecipesList recipes={this.state.data} search={this.state.search} handleChange={this.handleChange} handleSubmit={this.handleSubmit} error={this.state.error} />) : (<div><h2>Data Loading...</h2></div>)}
+     <div className="container mt-5 mb-5">
+      {recive ? (<RecipesList recipes={this.state.data} search={this.state.search} handleChange={this.handleChange} handleSubmit={this.handleSubmit} error={this.state.error} />) : (<div className="loading"><p>Data Loading...<br/><img src={loadImage} /></p></div>)}
         
-      </>
+      </div>
     )
   }
 }

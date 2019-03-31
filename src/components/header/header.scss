@@ -12,12 +12,11 @@
       content:"";
       width:100%;
       height:100%;
-      background:rgba(0,0,0,0.5);
+      background:rgba(0,0,0,0.3);
     }
   }
   .HeadTxt{
     z-index: 1;
-    display: table-cell;
     width: 100%;
     height:100%;
     position: relative;
@@ -26,6 +25,18 @@
     h1{
       color:#FFF;
       text-align: center;
+      padding-top:100px;
     }
+  }
+}
+.Footer{
+  background-color: #000;
+  width:100%;
+  p{
+    color:#FFF;
+    text-align: center;
+    padding:10px;
+    font-size: 12px;
+    margin:0;
   }
 }

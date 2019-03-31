@@ -7,7 +7,7 @@ export default class TourNav extends React.Component {
   render() {
     return (
       <header>
-        <nav>
+        <nav className="container">
           <div className="nav">
             <div className="nav-header">
               <Link to="/">

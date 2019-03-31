@@ -1,6 +1,6 @@
 import React from 'react';
 import RecipeDetailsCom from '../components/recipe/recipe-details';
-
+import loadImage from '../images/load.gif';
 export default class RecipeDetails extends React.Component{
   constructor(props){
     super(props);
@@ -28,9 +28,9 @@ export default class RecipeDetails extends React.Component{
   render(){
     if(this.state.loading){
       return(
-        <>
-          <h2>Loading Recipe....</h2>
-        </>
+        <div className="container">
+          <div className="loading mt-4 mb-4"><p>Data Loading...<br/><img src={loadImage} /></p></div>
+        </div>
       )
     }
     return(
